@@ -1,0 +1,74 @@
+---
+title: "Adolescent Social Motives"
+author: "John Flournoy"
+date: "8/6/2018"
+output: 
+  ioslides_presentation:
+    incremental: true
+    widescreen: true
+    mathjax: local
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The importance of adolescence
+
+- Transition from quiescent childhood to adulthood
+- Avoidable health-risks increase
+
+## Lenses for understading adolescence
+
+- "Imbalanced" brain-system development (Casey et al., 2016; Shulman et al., 2016)
+- Need for exploration (Romer et al., 2017)
+- Social reorientation toward peers (Nelson et al., 2016)
+- Can we get more specific about functional relevance of behavior?
+
+## Status and Mate-seeking
+
+- Sexual activity as a risk-factor
+- Popularity: antecedents and consequences
+- Status and Mate-seeking as developmentally appropriate goals
+- Motives encourage behaviors that satisfice them
+- How much of adolescent decision making is in service of these motives?
+- To know we need to measure them.
+
+## Measuring social motives in the lab
+
+- What might be influenced by differences in motivations?
+- Attentional learning: cue salience influenced by past predictive value (Kruschke, 2011; Mackintosh, 1975)
+- Information relevant to social motivations should be learned more quickly
+
+## The Social Probabilistic Learning Task (SPLT)
+
+<img src="figures/trial_example.png" style="width:50%;float:right" />
+
+- Association between each of 6 faces with one of 2 words
+- **Hungry/Thirsty**  
+  **Dating/Looking**  
+  **Popular/Unpopular**
+- Each trial  
+  press $\leftarrow$ or $\rightarrow$  
+  receive feedback
+- Probabilisitic: Best answer rewarded 80%
+- 8 blocks x 8 trials x 6 faces = 384 trials
+
+## Participants
+
+| Sample                  |   N *Male* |*Female*|   Age *Male* |   *Female* |
+|-------------------------|-----------:|-------:|-------------:|-----------:|
+| Foster-care adolescents |         19 |     20 |   15.6 (1.5) | 17.0 (1.7) |
+| Community adolescents   |         29 |     36 |   15.5 (1.5) | 15.6 (1.7) |
+| College Students        |         33 |     52 |   20.9 (4.2) | 19.3 (1.3) |
+| College Students Online |         37 |    104 |   19.8 (1.4) | 19.3 (1.2) |
+
+- Of 334 participants, task data was missing for 21
+- 33% (N=13) were from the foster-care adolescent sample
+
+## Participants Pubertal Development
+
+<img src="figures/pdsplot-1.svg" style="width:90%" />
+
+##
