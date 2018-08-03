@@ -12,6 +12,10 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+# load('~/code_new/social-motives-rl-writeup/rda/descriptive-statistics.rda')
+# load('~/code_new/social-motives-rl-writeup/rda/fit-model-to-participant-data.rda')
+# load('~/code_new/social-motives-rl-writeup/rda/age-learning-association.rda')
+load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 ```
 
 ## The importance of adolescence
@@ -71,10 +75,315 @@ knitr::opts_chunk$set(echo = FALSE)
 | College Students Online |         37 |    104 |   19.8 (1.4) | 19.3 (1.2) |
 
 - 313 participants provided task data (334 - 21 missing)
-- 33% (N=13) were from the foster-care adolescent sample
+- N=13 missing were from the foster-care adolescent sample
 
 ## Participants Pubertal Development
 
 <img src="figures/pdsplot-1.svg" style="width:90%" />
 
-## 
+## Approach to modeling task behavior
+
+1. Lo-fi: Average number of optimal decisions during last 1/2 of the run.
+  - H1: More optimal decisions in motive-conditions
+  - H2: Size of difference will be bigger in more developed participants 
+  - H3: Size of difference will +correlate with self-report motives
+2. Formal: Rescorla-Wagner iterative learning model
+  - Model paramter differences between conditions
+  - Explore individual differences
+
+## Low-fi: Does motive-framing enhance learning?
+
+<img src="figures/trialaverages-1.svg" style="width:70%;float:left" />
+
+**D/L**  
+t(185) = 2.69,  
+D = .029  
+p = .008 
+
+**P/U**  
+t(185) = 4.54,  
+D = .047  
+p = .00001
+
+## Modeling using iterative instrumental learning
+
+Probability of pressing $\rightarrow$ on each trial is determined by an action weight.
+
+Action weight is a function of: 
+
+1. Right-bias $b$ - Some people might just be prone to (not) pressing $\rightarrow$
+2. "Noise" $\xi$ - Random responding (attention, hurrying, lower ability)
+3. Reward-value $\rho$ - How rewarding are those points you get?
+4. Learning-rate $\epsilon$ - How much are you affected be each trial?
+
+## Learning rate differences
+
+<img src="figures/all_figures/epsdiff-1.svg" style="width:80%" />
+
+3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
+
+## Reward sensitivity differences
+
+<img src="figures/all_figures/rhodiff-1.svg" style="width:80%" />
+
+3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
+
+## Irriducible noise differences
+
+<img src="figures/all_figures/xidiff-1.svg" style="width:80%" />
+
+3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
+
+## Right-bias differences
+
+<img src="figures/all_figures/bdiff-1.svg" style="width:80%" />
+
+3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
+
+## Aim 1 Summary: Motive effects on learning
+
+<div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
+1. Overall better learning in motive conditions
+2. Possibly due to higher learning rate, lower noise
+</div>
+
+## Correlations with development
+
+Does learning enhancement reflect motives that, ostensibly, develop during adolescence?
+
+Indices of development:
+
+- Age
+- Pubertal Development Scale (Petersen et al., 1988)
+
+## Optimal choice performance and age
+
+<img src="figures/all_figures/poptageplot-1.svg" style="width:90%" />
+
+## Optimal choice performance and puberty
+
+<img src="figures/all_figures/poptpdsplot-1.svg" style="width:90%" />
+
+## Model parameters and age
+
+<img src="figures/all_figures/ageparplots-1.svg" style="width:85%" />
+
+## Model parameters and puberty
+
+<img src="figures/all_figures/pubertyparplots-1.svg" style="width:85%" />
+
+## Aim 2 Summary: Motive effects and development
+
+<div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
+1. Condition-differences similar at different ages & PDS scores.
+1. More developed participants perform better...
+2. ...likely due to less "noise" ($\xi$).
+</div>
+
+## Correlations with self-report motives
+
+Does learning enhancement reflect motive differences as measured by self-report?
+
+Measures related to social motives (College samples only)
+
+- Fundamental Social Motives Inventory (FSMI; Neel et al., 2015)
+- Dominance & Prestige Strategies (D&P; Cheng et al., 2013)
+
+Measures related to social motives (All samples)
+
+- Kids' Social Reward Questionnaire (K-SRQ; Foulkes et al., 2014)
+- Urgency and Sensation-Seeking (UPPS-P; Whiteside et al., 2005)
+
+*nb: all analyses done using latent variable measurement models*
+
+## College samples
+
+<img src="figures/scalespltcorcollege-1.svg" style="width:80%" />
+
+## All samples
+
+<img src="figures/scalespltcorcombined-1.svg" style="width:80%" />
+
+## Aim 3 Summary: Motive effects and self-report motives
+
+<div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
+1. No significant correlations with convergent measures.
+2. All $|r| < .2$ (many "significantly" so)
+</div>
+
+## General conclusions
+
+1. Learning is affected by "motive" framing
+2. Individual differences don't behave as expected
+    - One possibility: these motives _don't_ develop during adolescence  
+    AND  
+    Self-report measures _don't_ measure motives
+    - Another possibility: the task effect is not the result of motives, per se
+      - Descriptors vary along many possible dimensions
+    - One more: individual differences in the task are badly measured
+3. We did learn something about reinforcement learning
+
+## These results in context
+
+1. Generally, adults, or young adults, perform better than adolescents or children<sup>1</sup> 
+    - This study is the largest cross-sectional, and second to @peters2017 longitudinal
+2. Some author propose that purported hightened reward sensitivity during adolescence may enhance learning.
+    - Scant evidence in the literature [@davidow2016]
+    - No evidence of adolescent-specific benefit
+    - No evidence of adolescent-reward sensitivity (e.g., $rho$)
+3. Very little work on instrumental learning of social information in adolescence.
+
+<span style="font-size:8pt">1 @duijvenvoorde2008; @decker2015; @bos2009; @cohen2010; @christakou2013; @palminteri2016; @rosenblau2017; @peters2017; @mccormick2017.</span>
+
+## Thanks to...
+
+*My committee:* Jenn Pfeifer, Sanjay Srivastava, Elliot Berkman, Nicole Giuliani
+
+All 334 participants
+
+*TDS Study Coordinators:* Maurine Durnin, Garrett Ross
+
+*Research assistants:* Emily Talbot, Marina Parker, Hannah Fraser, Cameron Hansen
+
+The DSN and PSD Labs
+
+## Summary of conclusions
+
+> 1. Learning is affected by "motive" framing
+> 2. Individual differences don't behave as expected
+> 3. Behavior/development correlations are consistent with previous literature
+
+## Extra slides follow
+
+## Individual-level parameter correlations
+
+<img src="figures/all_figures/corparplot-1.svg" style="width:80%" />
+
+## Individual-level parameter and behavior
+
+<img src="figures/all_figures/parametersvbehavior-1.svg" style="width:80%" />
+
+## Individual-level parameter confidence
+
+<img src="figures/all_figures/confidencevparameters-1.svg" style="width:80%" />
+
+## Epsilon chains
+
+<img src="figures/all_figures/unnamed-chunk-28-1.png" style="width:80%" />
+
+## Rho chains
+
+<img src="figures/all_figures/unnamed-chunk-29-1.png" style="width:80%" />
+
+## Xi chains
+
+<img src="figures/all_figures/unnamed-chunk-30-1.png" style="width:80%" />
+
+## b chains
+
+<img src="figures/all_figures/unnamed-chunk-31-1.png" style="width:80%" />
+
+## Model predictions through identical runs
+
+<img src="figures/all_figures/modelpredictedbehavior-1.svg" style="width:80%" />
+
+## Model predicted versus observed proportions
+
+```{r out.width="80%"}
+ggplot2::theme_set(ggplot2::theme_minimal())
+splt_data_used_pR_block_sum_plot
+```
+
+## Learning enhancement with Age
+
+<img src="figures/all_figures/poptdiffageplot-1.svg" style="width:80%" />
+
+$\beta_{\text{adolescent}} = .08;\beta_{\text{college}} = .01$
+
+## Learning enhancement with Puberty
+
+<img src="figures/all_figures/poptdiffpdsplot-1.svg" style="width:70%" />
+
+$\beta_{\text{adolescent}} = .03; \beta_{\text{college}} = .02$
+
+## Model condition differences and Age
+
+<img src="figures/all_figures/ageparconplots-1.svg" style="width:80%" />
+
+## Model condition differences and Puberty
+
+<img src="figures/all_figures/pubertyparconplots-1.svg" style="width:80%" />
+
+## K-SRQ and age
+
+<img src="figures/all_figures/ksrqagepredplot-1.svg" style="width:80%" />
+
+## K-SRQ and PDS
+
+<img src="figures/all_figures/ksrqpdspredplot-1.svg" style="width:80%" />
+
+## UPPS-P and age
+
+<img src="figures/all_figures/uppspagepredplot-1.svg" style="width:80%" />
+
+## UPPS-P and PDS
+
+<img src="figures/all_figures/uppsppdspredplot-1.svg" style="width:80%" />
+
+## FSMI Mate-seeking
+
+<img src="figures/all_figures/ltrfsmi-1.svg" style="width:80%" />
+
+## FSMI Mate-seeking
+
+<img src="figures/fsmi_status_cors.png" style="width:50%" />
+
+## Baseline task correlations - College
+
+<img src="figures/all_figures/scalespltcorbaselinecollege-1.svg" style="width:100%" />
+
+## Baseline task correlations - All
+
+<img src="figures/all_figures/scalespltcorbaselinecombined-1.svg" style="width:100%" />
+
+## Baseline task correlations - All
+
+<img src="figures/outcomes_table.png" style="width:60%" />
+
+## Var prop due to posterior means
+
+Variance among posterior means for individual-level parameters versus total variance in posteriors:
+
+.37, and the rest .45 - .56 
+
+For raw behavior, roughly:
+
+H/T: 0.24, $\Delta$D/L: 0.13, $\Delta$P/U: 0.14
+
+##  $\epsilon$ individual differences
+
+```{r out.width="80%"}
+ggplot2::theme_set(ggplot2::theme_minimal())
+beta_estimates_by_sample_ep_prm_plot
+```
+
+##  $\rho$ individual differences
+
+```{r out.width="80%"}
+ggplot2::theme_set(ggplot2::theme_minimal())
+beta_estimates_by_sample_rho_prm_plot
+```
+
+##  $\xi$ individual differences
+
+```{r out.width="80%"}
+ggplot2::theme_set(ggplot2::theme_minimal())
+beta_estimates_by_sample_xi_prm_plot
+```
+
+##  $b$ individual differences
+
+```{r out.width="80%"}
+ggplot2::theme_set(ggplot2::theme_minimal())
+beta_estimates_by_sample_b_plot
+```
