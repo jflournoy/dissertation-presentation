@@ -1,46 +1,69 @@
-## The Importance of Adolescence
+## Adolescent social reorientation
 
-In humans, middle childhood is remarkably long compared to other close relatives, with very slow biological and social development compared to infancy and very early childhood. 
+Hallmarks of adolescent development As adolescence progresses:
 
-At the end of childhood, development accelerates to a rapid pace during adolescence which catapults individuals out of childhood and into adulthood.
+- Romantic and sexual interests develop (W. A. Collins et al., 2009)
 
-It has seemed obvious to researchers since at least 1904 that adolescents are prone to seek excitement wherever they can find it
-And that this puts their health at risk.
+Rates of dating and sexual behavior increase
 
-In fact, especially through young adulthood there's a marked increase in risk for preventable injury and death,
-sexual behavior, 
-and substance use.
+- Spend less time with family, more time alone or with peers (Larson & Richards, 1991)
 
-## Lenses for understanding adolescence
+Boys spend less time with family, but replace it with time alone
 
-In current research on adolescent development, a couple of lenses dominate our understanding of what gives rise to the prevalence of health-risking decisions made by adolescents.
+- Give status more priority (LaFontana & Cillessen, 2010)
 
-Imbalance models posit that development of reward-seeking systems outpaces development of cognitive control systems, leading to less sensitivity to negative outcomes and increased propensity to take risks.
+More and more adolescents prioritize popularity over other interests, especially rule adherence. Also, romance, companionship friendship Acheivement.
 
-Another view focuses on the idea that adolescents are just beginning to form heuristic decision-making strategies.
-In order to do this, they have to explore options in a more rational way, taking risks when they judge the probabilities of negative outcomes to be low, but not avoiding them altogether.
+## Two faces of social reorientation
 
-Social reorientation helps provide some context for why certain risks may be more attractive than others, in part perhaps because adolescents are turning their social attention away from the family, or at least increasingly toward their peers.
+Risk 
 
-Finding one's place in shifting status hierarchies and pursuing romantic and sexual interests are generally understood to be important factors aspects of an adolescent's development.
+- Sexual behavior itself as risk (e.g., CDC, 2018)
 
-## Status and mate-seeking
+Public health research in the US characterizes any adolescent sex as a health risk
 
-Sexual activity during adolescence  has been studied as a risk-behavior
-Social status, or popularity, has been studied more extensively with research on how popularity is associated with alcohol use, as well as who is able to gain status during adolescence.
+- Risk taking as an antecedent & consequence of popularity (e.g., Allen et al., 2005; de Bruyn & Weisfeld, 2017)
 
-However, very little work has attempted to assess the motivation for status or mate-seeking more directly.
+Allen and colleagues show longitudinally that increases in popularity lead to increases in minor delinquency and substance use, while de bruyn and weisfeld show that both pro-social and dominant popular adolescents have higer incidence of substance use etc.
 
-From a neuroeconomic perspective on decision making, the degree to which someone is motivated to attain status or pursue romantic interests would be a crucial part of how that person evaluates the value of particular behaviors.
+Benefit
 
-Understanding more directly how these motivations change during adolescence, and individual differences in these motivations may help us begin to tease apart the function of certain behaviors.
-That is, understanding adolescent-rising motives for status and mate-seeking may help us understand how certain behaviors functions as means toward achieving these developmentally relevant goals.
+Mate seeking and status concerns from the view of evolutionary psychology are fundamental motives evolved in response to fitness challenges.
 
-## Measuring social motives in the lab 
+- Fundamental motives evolved in response to fitness challenges (Ellis et al., 2012; Schaller et al., 2017)
 
-It was with this goal in mind that I set out on the present research.
+- Mate-seeking (W. A. Collins et al, 2009; Harden & Mendle, 2011)
 
-Measuring motivations via behavior in a laboratory requires that I am able to examine behavior that is affected by these motives.
+Well-being may be enhanced by satisfaction of these motives, as well.
+
+Andrew Collins and colleagues review literature showing associations between romantic relationships and relationship quality and self-worth.
+
+Harden and Mendle show that controlling for genetic confounds, sexual activity in the context of romantic relationships is associated with less delinquency
+
+- Status (Allen et al., 2005; Shi & Moody, 2017)
+
+Allen and colleagues show that despite the increase in risk behaviors, popularity is associated with future decreases in hostile behavior. 
+
+Shi and Moody show that adolescent social status longitudinally predicts adult income over and above a host of related confounds
+
+## Mechanisms of social reorientation
+
+What mechanisms might be responsible for this shift?
+
+Nelson and colleagues propose
+
+- Developmental changes in perceptual, motivational, and executive control brain regions (Nelson et al., 2016).
+- May highlight developmentally-relevant opportunities in the environment
+    - Direct effects on cue salience
+    - Learned associations that shift due to reward value shifts
+
+## Measuring social motives in the lab
+
+- Goal: create behavioral task using learning to measure social motives.
+- Reinforcement learning & attention
+    - Cue salience influenced by past predictive value (Kruschke, 2011; Mackintosh, 1975)
+    - _A priori_ salience affects learning
+- Information relevant to social motivations should be learned more quickly
 
 Attentional theories of learning hold that cue salience is influenced by the past predictive value of that cue.
 In other words, if some information in the environment is relevant to an particular motivation, an individual high in that motivation will attend more strongly to that information.
@@ -49,6 +72,7 @@ The increased salience of that information for that person means that they shoul
 For example, if a particular adolescent was interested in finding new romantic or sexual partners, they've probably learned to that it's important to know about whether their peers are in a relationship or not, and so they would be expected to learn more quickly about the relationship status of other people.
 Similarly for someone motivated to gain status, knowing the social standing of others is likely to be important, and learned more quickly.
 
+...
 
 ## Iterative instrumental learning model
 

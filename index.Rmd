@@ -18,45 +18,58 @@ knitr::opts_chunk$set(echo = FALSE)
 load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 ```
 
-## The importance of adolescence
+## Adolescent social reorientation
 
-- Transition from quiescent childhood to adulthood
-- Avoidable health-risks increase
+As adolescence progresses:
 
-## Lenses for understading adolescence
+- Romantic and sexual interests develop (W. A. Collins et al., 2009)
+- Spend less time with family, more time alone or with peers (Larson & Richards, 1991)
+- Give status more priority (LaFontana & Cillessen, 2010)
 
-- "Imbalanced" brain-system development (Casey et al., 2016; Shulman et al., 2016)
-- Need for exploration (Romer et al., 2017)
-- Social reorientation toward peers (Nelson et al., 2016)
-- Can we get more specific about functional relevance of behavior?
+## Two faces of social reorientation
 
-## Status and Mate-seeking
+Risk 
 
-- Sexual activity as a risk-factor
-- Popularity: antecedents and consequences
-- Status and Mate-seeking as developmentally appropriate goals
-- Motives encourage behaviors that satisfice them
-- How much of adolescent decision making is in service of these motives?
-- To know we need to measure them.
+- Sexual behavior itself as risk (e.g., CDC, 2018)
+- Risk taking as an antecedent & consequence of popularity (e.g., Allen et al., 2005; de Bruyn & Weisfeld, 2017)
+
+Benefit
+
+- Fundamental motives evolved in response to fitness challenges (Ellis et al., 2012; Schaller et al., 2017)
+- Mate-seeking (W. A. Collins et al, 2009; Harden & Mendle, 2011)
+- Status (Allen et al., 2005; Shi & Moody, 2017)
+
+## Mechanisms of social reorientation
+
+- Neurodevelopmental changes in perceptual, motivational, and executive control brain regions change the way you experience the environment (Nelson et al., 2016)
+- May highlight developmentally-relevant opportunities in the environment
+    - Direct effects on cue salience
+    - Shifting associations via changes in what someone rewarding
 
 ## Measuring social motives in the lab
 
-- What might be influenced by differences in motivations?
-- Attentional learning: cue salience influenced by past predictive value (Kruschke, 2011; Mackintosh, 1975)
-- Information relevant to social motivations should be learned more quickly
+- Goal: create behavioral task to measure social motives
+- Using the effect of salience on learning
+- Attentional theories of learning posit that 
+    - Salience of a stimulus affects learning
+    - Past predictive value of a stimulus can alter its salience (Kruschke, 2011; Mackintosh, 1975)
+- During adolescence, information relevant to social motivations should be more salient and so should be learned more quickly
+- As an individual develops through adolescence, this should become more pronounced.
 
 ## The Social Probabilistic Learning Task (SPLT)
 
 <img src="figures/trial_example.png" style="width:50%;float:right" />
 
-- Association between each of 6 faces with one of 2 words
+- People learn an association between each of 6 faces and one of 2 words
 - **Hungry/Thirsty**  
   **Dating/Looking**  
   **Popular/Unpopular**
-- Each trial  
-  press $\leftarrow$ or $\rightarrow$  
-  receive feedback
-- Probabilisitic: Best answer rewarded 80%
+- Each trial
+    - presented with a face with 2 potential descriptors
+    - press $\leftarrow$ or $\rightarrow$ keys to select which descriptor matches that face
+    - receive feedback of 0, 1, 5 points
+    - The first time is a wild guess, but people learn over time
+    - 20% of the time, people get misleading feedback
 - 8 blocks x 8 trials x 6 faces = 384 trials
 
 ## Aims
@@ -67,6 +80,8 @@ load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 
 ## Participants
 
+Drawn from ongoing longitudinal study (TDS) and SONA
+
 | Sample                  |   N *Male* |*Female*|   Age *Male* |   *Female* |
 |-------------------------|-----------:|-------:|-------------:|-----------:|
 | Foster-care adolescents |         19 |     20 |   15.6 (1.5) | 17.0 (1.7) |
@@ -75,7 +90,7 @@ load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 | College Students Online |         37 |    104 |   19.8 (1.4) | 19.3 (1.2) |
 
 - 313 participants provided task data (334 - 21 missing)
-- N=13 missing were from the foster-care adolescent sample
+- $N=13$ missing were from the foster-care adolescent sample
 
 ## Participants Pubertal Development
 
@@ -84,12 +99,12 @@ load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 ## Approach to modeling task behavior
 
 1. Lo-fi: Average number of optimal decisions during last 1/2 of the run.
-  - H1: More optimal decisions in motive-conditions
-  - H2: Size of difference will be bigger in more developed participants 
-  - H3: Size of difference will +correlate with self-report motives
+    - H1: More optimal decisions in motive-conditions
+    - H2: Size of difference will be bigger in more developed participants 
+    - H3: Size of difference will +correlate with self-report motives
 2. Formal: Rescorla-Wagner iterative learning model
-  - Model paramter differences between conditions
-  - Explore individual differences
+    - Examine model parameter differences between conditions
+    - Explore individual differences
 
 ## Low-fi: Does motive-framing enhance learning?
 
@@ -105,16 +120,16 @@ t(185) = 4.54,
 D = .047  
 p = .00001
 
-## Modeling using iterative instrumental learning
+## Reinforcement learning model
 
-Probability of pressing $\rightarrow$ on each trial is determined by an action weight.
-
-Action weight is a function of: 
-
-1. Right-bias $b$ - Some people might just be prone to (not) pressing $\rightarrow$
-2. "Noise" $\xi$ - Random responding (attention, hurrying, lower ability)
-3. Reward-value $\rho$ - How rewarding are those points you get?
-4. Learning-rate $\epsilon$ - How much are you affected be each trial?
+- Describes the probability of pressing $\rightarrow$ on each trial
+- This probability is determined by an action weight
+- Action weight is a function of: 
+    1. Right-bias $b$ - Some people might just be prone to (not) pressing $\rightarrow$
+    2. "Noise" $\xi$ - Random responding (attention, hurrying, lower ability)
+    3. Reward-value $\rho$ - How rewarding are those points you get?
+    4. Learning-rate $\epsilon$ - How much are you affected be each trial?
+- Bayesian analysis and interpretation of posterior densities
 
 ## Learning rate differences
 
@@ -227,21 +242,36 @@ Measures related to social motives (All samples)
 
 1. Generally, adults, or young adults, perform better than adolescents or children<sup>1</sup> 
     - This study is the largest cross-sectional, and second to @peters2017 longitudinal
-2. Some author propose that purported hightened reward sensitivity during adolescence may enhance learning.
-    - Scant evidence in the literature [@davidow2016]
+2. Some author propose that purported heightened reward sensitivity during adolescence may enhance learning.
+    - Scant evidence in the literature (Davidow et al., 2016)
     - No evidence of adolescent-specific benefit
     - No evidence of adolescent-reward sensitivity (e.g., $rho$)
 3. Very little work on instrumental learning of social information in adolescence.
 
-<span style="font-size:8pt">1 @duijvenvoorde2008; @decker2015; @bos2009; @cohen2010; @christakou2013; @palminteri2016; @rosenblau2017; @peters2017; @mccormick2017.</span>
+<span style="font-size:12pt">1 (Bos et al., 2009; Christakou et al., 2013; Cohen et al., 2010; Decker et al., 2015; Duijvenvoorde et al., 2008; McCormick & Telzer, 2017; Palminteri et al., 2016; Peters & Crone, 2017; Rosenblau et al., 2017)</span>
+
+## Future directions
+
+- Account for working memory in learning task (A. G. E. Collins et al., 2017)
+- Expand lexical space
+- Other behavioral paradigms may provide more fine-grained information
+    - Continuous-value economic games 
+    - "Information exploration" games
+- Focus on means 
 
 ## Thanks to...
 
-*My committee:* Jenn Pfeifer, Sanjay Srivastava, Elliot Berkman, Nicole Giuliani
+*My committee:*  
+Chair: Jennifer Pfeifer  
+Co-Chair: Sanjay Srivastava  
+Member: Elliot Berkman  
+Outside Member: Nicole Giuliani
+
+Kate Mills
 
 All 334 participants
 
-*TDS Study Coordinators:* Maurine Durnin, Garrett Ross
+*TDS Study Coordinators:* Maureen Durnin, Garrett Ross
 
 *Research assistants:* Emily Talbot, Marina Parker, Hannah Fraser, Cameron Hansen
 
@@ -253,7 +283,7 @@ The DSN and PSD Labs
 > 2. Individual differences don't behave as expected
 > 3. Behavior/development correlations are consistent with previous literature
 
-## Extra slides follow
+## More slides? You shouldn't have!
 
 ## Individual-level parameter correlations
 
