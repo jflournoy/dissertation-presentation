@@ -201,7 +201,7 @@ Indices of development:
 1. More developed participants perform better in general...
 2. ...likely due to less random responding ($\xi$).
 3. Motive related learning enhancement does not appear to covary with development as we would expect.
-    - Older particpants do not appear to learn better in social motive conditions.
+    - Older participants do not appear to learn better in social motive conditions.
 </div>
 
 ## Aim 3: Correlations with self-report motives
@@ -232,33 +232,37 @@ Measures related to social motives (All samples)
 
 <div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
 1. No significant correlations with convergent measures
-2. Absolute magnitude of all corraltions < .2 (many significantly)
+2. Absolute magnitude of all correlations < .2 (many significantly)
 3. Learning enhancement does not relate to self-report motives
 </div>
 
 ## General conclusions
 
-1. Learning is affected by "motive" framing
-2. Individual differences don't behave as expected
-    - One possibility: these motives _don't_ develop during adolescence  
-    AND  
-    Self-report measures _don't_ measure motives
-    - Another possibility: the task effect is not the result of motives, per se
-        - Descriptors vary along many possible dimensions
-    - One more: individual differences in the task are badly measured
-3. We did learn something about reinforcement learning
+1. Overall better learning and higher learning rate in social motive conditions.
+2. This social motive learning enhancement does not appear to covary with development.
+3. Social motive learning enhancement does not relate to self-report of motives.
 
-## These results in context
+## Possible explantions
 
-1. Generally, adults, or young adults, perform better than adolescents or children<sup>1</sup> 
-    - This study is the largest cross-sectional, and second to @peters2017 longitudinal
-2. Some author propose that purported heightened reward sensitivity during adolescence may enhance learning.
+1. Mate-seeking and status motives _don't_ develop during adolescence  
+3. Self-report measures _don't_ measure motives
+2. Social motives don't affect stimulus salience and so don't affect learning
+4. Task behavior is an imprecise measure of individual differences in social motives
+    - Task learning is irrelevant to actual social goals (e.g., popularity of computer-generated face is not instrumentally valuable for satisfying a status motive).
+    - Binary choice outcomes are less reliable indicators of latent constructs
+    - The choice of these particular descriptors may be problematic in some way
+
+## Basic reinforcement learning finding
+
+Adults, or young adults, perform better than adolescents or children
+
+1. This is consistent with most of the literature<sup>1</sup>, and is the largest cross-sectional sample to date
+2. Some authors propose that adolescents should perform better than adults due to their heightened reward sensitivity
     - Scant evidence in the literature (Davidow et al., 2016)
-    - No evidence of adolescent-specific benefit
-    - No evidence of adolescent-reward sensitivity (e.g., $rho$)
-3. Very little work on instrumental learning of social information in adolescence.
+    - My data shows no evidence of adolescent-specific benefit
+    - No evidence of adolescent-specific-reward sensitivity (e.g., $\rho$)
 
-<span style="font-size:12pt">1 (Bos et al., 2009; Christakou et al., 2013; Cohen et al., 2010; Decker et al., 2015; Duijvenvoorde et al., 2008; McCormick & Telzer, 2017; Palminteri et al., 2016; Peters & Crone, 2017; Rosenblau et al., 2017)</span>
+<span style="font-size:12pt">1 Bos et al., 2009; Christakou et al., 2013; Cohen et al., 2010; Decker et al., 2015; Duijvenvoorde et al., 2008; McCormick & Telzer, 2017; Palminteri et al., 2016; Peters & Crone, 2017; Rosenblau et al., 2017</span>
 
 ## Future directions
 
