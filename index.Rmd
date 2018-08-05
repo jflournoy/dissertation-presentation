@@ -18,42 +18,44 @@ knitr::opts_chunk$set(echo = FALSE)
 load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 ```
 
-## Adolescent social reorientation
-
-As adolescence progresses:
+## Background: Adolescence is a preiod of social reorientation
 
 - Romantic and sexual interests develop (W. A. Collins et al., 2009)
 - Spend less time with family, more time alone or with peers (Larson & Richards, 1991)
 - Give status more priority (LaFontana & Cillessen, 2010)
 
-## Two faces of social reorientation
+## Two faces of social reorientation: risk
 
-Risk 
+- Sexual behavior during adolescence itself as health risk 
+    - Youth Risk Behavior Survey considers ever having had sex as a risk-factor to be reduced (CDC, 2018)
+- Romantic relationships can be a source of emotional distress (W. A. Collins et al, 2009)
+- Minor delinquency, substance use may be an antecedent & consequence of popularity (Allen et al., 2005; de Bruyn & Weisfeld, 2017)
 
-- Sexual behavior itself as risk (e.g., CDC, 2018)
-- Risk taking as an antecedent & consequence of popularity (e.g., Allen et al., 2005; de Bruyn & Weisfeld, 2017)
+## Two faces of social reorientation: Benefit
 
-Benefit
-
-- Fundamental motives evolved in response to fitness challenges (Ellis et al., 2012; Schaller et al., 2017)
-- Mate-seeking (W. A. Collins et al, 2009; Harden & Mendle, 2011)
-- Status (Allen et al., 2005; Shi & Moody, 2017)
+- Evolutionary psychology perspective 
+    - Development of motivations evolved in response to fitness challenges (Ellis et al., 2012; Schaller et al., 2017)
+    - Finding mates, and gaining status
+- Satisfaction of these motives might support well-being
+    - Being in a relationship associated with higher self-worth  (W. A. Collins et al, 2009)
+    - Controlling for genetic confounds, sexual activity in romantic relationships is related to less delinquency (Harden & Mendle, 2011)
+    - Popularity also prospectively associated with decreases in overt hostility (Allen et al., 2005)
+    - Adolescent social status associated with adult income (Shi & Moody, 2017)
 
 ## Mechanisms of social reorientation
 
 - Neurodevelopmental changes in perceptual, motivational, and executive control brain regions change the way you experience the environment (Nelson et al., 2016)
 - May highlight developmentally-relevant opportunities in the environment
-    - Direct effects on cue salience
-    - Shifting associations via changes in what someone rewarding
+    - Directly altering stimulus salience
+    - Shifting associations via changes in what someone finds rewarding
 
-## Measuring social motives in the lab
+## Goal: Measuring social motives in the lab
 
-- Goal: create behavioral task to measure social motives
-- Using the effect of salience on learning
+- Create behavioral task using the effect of salience on learning
 - Attentional theories of learning posit that 
     - Salience of a stimulus affects learning
     - Past predictive value of a stimulus can alter its salience (Kruschke, 2011; Mackintosh, 1975)
-- During adolescence, information relevant to social motivations should be more salient and so should be learned more quickly
+- Information relevant to social motivations should be more salient and so should be learned more quickly
 - As an individual develops through adolescence, this should become more pronounced.
 
 ## The Social Probabilistic Learning Task (SPLT)
@@ -75,38 +77,44 @@ Benefit
 ## Aims
 
 1. Does this "motivational framing" enhance learning?
+    - Will people learn the social descriptors better?
 2. Does motive-related learning enhancement covary with development as we would expect?
+    - Will this effect be stronger in older participants?
 3. Does learning enhancement relate to self-report motives?
+    - Will this effect be stronger for those that report stronger social motives?
 
-## Participants
+## 334 Participants
 
-Drawn from ongoing longitudinal study (TDS) and SONA
+Adolescents drawn from ongoing longitudinal study (TDS)  
+College students from SONA
 
-| Sample                  |   N *Male* |*Female*|   Age *Male* |   *Female* |
-|-------------------------|-----------:|-------:|-------------:|-----------:|
-| Foster-care adolescents |         19 |     20 |   15.6 (1.5) | 17.0 (1.7) |
-| Community adolescents   |         29 |     36 |   15.5 (1.5) | 15.6 (1.7) |
-| College Students        |         33 |     52 |   20.9 (4.2) | 19.3 (1.3) |
-| College Students Online |         37 |    104 |   19.8 (1.4) | 19.3 (1.2) |
+| Sample                  |    N|     *Male* |*Female*|   Age *Male* |   *Female* |
+|-------------------------|----:|-----------:|-------:|-------------:|-----------:|
+| Community adolescents   |   65|         29 |     36 |   15.5 (1.5) | 15.6 (1.7) |
+| Foster-care adolescents |   39|         19 |     20 |   15.6 (1.5) | 17.0 (1.7) |
+| College Students        |   85|         33 |     52 |   20.9 (4.2) | 19.3 (1.3) |
+| College Students Online |  141|         37 |    104 |   19.8 (1.4) | 19.3 (1.2) |
 
+- $N=13$ foster-care adolescents don't have task data
 - 313 participants provided task data (334 - 21 missing)
-- $N=13$ missing were from the foster-care adolescent sample
 
 ## Participants Pubertal Development
 
 <img src="figures/pdsplot-1.svg" style="width:90%" />
 
-## Approach to modeling task behavior
+## Approaches to describing task behavior
 
-1. Lo-fi: Average number of optimal decisions during last 1/2 of the run.
+1. Use raw behavior directly: Average number of optimal decisions during last 1/2 of the run.
     - H1: More optimal decisions in motive-conditions
     - H2: Size of difference will be bigger in more developed participants 
     - H3: Size of difference will +correlate with self-report motives
-2. Formal: Rescorla-Wagner iterative learning model
+2. Bayesian modeling: Rescorla-Wagner instrumental learning model
     - Examine model parameter differences between conditions
     - Explore individual differences
 
-## Low-fi: Does motive-framing enhance learning?
+## Aim 1: Does motive-framing enhance learning?
+
+Raw behavior
 
 <img src="figures/trialaverages-1.svg" style="width:70%;float:left" />
 
@@ -120,26 +128,20 @@ t(185) = 4.54,
 D = .047  
 p = .00001
 
-## Reinforcement learning model
+## How the reinforcement learning model works
 
 - Describes the probability of pressing $\rightarrow$ on each trial
 - This probability is determined by an action weight
-- Action weight is a function of: 
+- Action weight is a function of 4 parameters: 
     1. Right-bias $b$ - Some people might just be prone to (not) pressing $\rightarrow$
     2. "Noise" $\xi$ - Random responding (attention, hurrying, lower ability)
-    3. Reward-value $\rho$ - How rewarding are those points you get?
-    4. Learning-rate $\epsilon$ - How much are you affected be each trial?
-- Bayesian analysis and interpretation of posterior densities
+    3. Reward-value $\rho$ - Determines how rewarding the points are
+    4. Learning-rate $\epsilon$ - Determines the how influential any given trial is 
+- Bayesian analysis to estimate the model and interpret parameter posterior densities
 
-## Learning rate differences
+## Right-bias differences
 
-<img src="figures/all_figures/epsdiff-1.svg" style="width:80%" />
-
-3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
-
-## Reward sensitivity differences
-
-<img src="figures/all_figures/rhodiff-1.svg" style="width:80%" />
+<img src="figures/all_figures/bdiff-1.svg" style="width:80%" />
 
 3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
 
@@ -149,9 +151,15 @@ p = .00001
 
 3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
 
-## Right-bias differences
+## Reward sensitivity differences
 
-<img src="figures/all_figures/bdiff-1.svg" style="width:80%" />
+<img src="figures/all_figures/rhodiff-1.svg" style="width:80%" />
+
+3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
+
+## Learning rate differences
+
+<img src="figures/all_figures/epsdiff-1.svg" style="width:80%" />
 
 3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
 
@@ -162,9 +170,9 @@ p = .00001
 2. Possibly due to higher learning rate, lower noise
 </div>
 
-## Correlations with development
+## Aim 2: Correlations with development
 
-Does learning enhancement reflect motives that, ostensibly, develop during adolescence?
+Does motive-related learning enhancement covary with development as we would expect?
 
 Indices of development:
 
@@ -190,14 +198,15 @@ Indices of development:
 ## Aim 2 Summary: Motive effects and development
 
 <div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
-1. Condition-differences similar at different ages & PDS scores.
-1. More developed participants perform better...
-2. ...likely due to less "noise" ($\xi$).
+1. More developed participants perform better in general...
+2. ...likely due to less random responding ($\xi$).
+3. Motive related learning enhancement does not appear to covary with development as we would expect.
+    - Older particpants do not appear to learn better in social motive conditions.
 </div>
 
-## Correlations with self-report motives
+## Aim 3: Correlations with self-report motives
 
-Does learning enhancement reflect motive differences as measured by self-report?
+Does learning enhancement relate to self-report motives?
 
 Measures related to social motives (College samples only)
 
@@ -222,8 +231,9 @@ Measures related to social motives (All samples)
 ## Aim 3 Summary: Motive effects and self-report motives
 
 <div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
-1. No significant correlations with convergent measures.
-2. All $|r| < .2$ (many "significantly" so)
+1. No significant correlations with convergent measures
+2. Absolute magnitude of all corraltions < .2 (many significantly)
+3. Learning enhancement does not relate to self-report motives
 </div>
 
 ## General conclusions
@@ -234,7 +244,7 @@ Measures related to social motives (All samples)
     AND  
     Self-report measures _don't_ measure motives
     - Another possibility: the task effect is not the result of motives, per se
-      - Descriptors vary along many possible dimensions
+        - Descriptors vary along many possible dimensions
     - One more: individual differences in the task are badly measured
 3. We did learn something about reinforcement learning
 
@@ -276,6 +286,8 @@ All 334 participants
 *Research assistants:* Emily Talbot, Marina Parker, Hannah Fraser, Cameron Hansen
 
 The DSN and PSD Labs
+
+Melanie Berry
 
 ## Summary of conclusions
 
@@ -417,3 +429,11 @@ beta_estimates_by_sample_xi_prm_plot
 ggplot2::theme_set(ggplot2::theme_minimal())
 beta_estimates_by_sample_b_plot
 ```
+
+## Late task behavior by sample
+
+<img src="figures/laterunlowfi.png" style="width:100%" />
+
+## Late task behavior by sample
+
+<img src="figures/earlyrunlowfi.png" style="width:100%" />
