@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE)
 load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 ```
 
-## Background: Adolescence is a preiod of social reorientation
+## Background: Adolescence is a period of social reorientation
 
 - Romantic and sexual interests develop (W. A. Collins et al., 2009)
 - Spend less time with family, more time alone or with peers (Larson & Richards, 1991)
@@ -86,7 +86,7 @@ load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
 ## 334 Participants
 
 Adolescents drawn from ongoing longitudinal study (TDS)  
-College students from SONA
+College students from UO Human Subjects Pool
 
 | Sample                  |    N|     *Male* |*Female*|   Age *Male* |   *Female* |
 |-------------------------|----:|-----------:|-------:|-------------:|-----------:|
@@ -137,7 +137,8 @@ p = .00001
     2. "Noise" $\xi$ - Random responding (attention, hurrying, lower ability)
     3. Reward-value $\rho$ - Determines how rewarding the points are
     4. Learning-rate $\epsilon$ - Determines the how influential any given trial is 
-- Bayesian analysis to estimate the model and interpret parameter posterior densities
+- Separate parameter for each condition
+- Bayesian analysis to estimate the model and interpret parameter posterior probability densities
 
 ## Right-bias differences
 
@@ -145,7 +146,7 @@ p = .00001
 
 3: Popular/Unpopular; 2: Dating/Looking; 1: Hungry/Thirsty
 
-## Irriducible noise differences
+## Noise differences
 
 <img src="figures/all_figures/xidiff-1.svg" style="width:80%" />
 
@@ -180,6 +181,8 @@ Indices of development:
 - Pubertal Development Scale (Petersen et al., 1988)
 
 ## Optimal choice performance and age
+
+Differences between conditions are relatively constant across age
 
 <img src="figures/all_figures/poptageplot-1.svg" style="width:90%" />
 
@@ -266,12 +269,10 @@ Adults, or young adults, perform better than adolescents or children
 
 ## Future directions
 
-- Account for working memory in learning task (A. G. E. Collins et al., 2017)
-- Expand lexical space
-- Other behavioral paradigms may provide more fine-grained information
-    - Continuous-value economic games 
-    - "Information exploration" games
-- Focus on means 
+- Further exploration of the task
+    - e.g., expand the range of tested social stimuli
+- Explore different types of tasks to measure social motivations
+    - e.g., tasks in which the stimuli may be perceived as useful in the pursuit of social goals
 
 ## Thanks to...
 
@@ -293,11 +294,11 @@ The DSN and PSD Labs
 
 Melanie Berry
 
-## Summary of conclusions
+## General conclusions
 
-> 1. Learning is affected by "motive" framing
-> 2. Individual differences don't behave as expected
-> 3. Behavior/development correlations are consistent with previous literature
+>1. Overall better learning and higher learning rate in social motive conditions.
+>2. This social motive learning enhancement does not appear to covary with development.
+>3. Social motive learning enhancement does not relate to self-report of motives.
 
 ## More slides? You shouldn't have!
 
