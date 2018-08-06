@@ -56,7 +56,7 @@ load('~/code_new/social-motives-rl-writeup/rda/extra-model-plots.rda')
     - Salience of a stimulus affects learning
     - Past predictive value of a stimulus can alter its salience (Kruschke, 2011; Mackintosh, 1975)
 - Information relevant to social motivations should be more salient and so should be learned more quickly
-- As an individual develops through adolescence, this should become more pronounced.
+- As an individual develops through adolescence, this should become more pronounced
 
 ## The Social Probabilistic Learning Task (SPLT)
 
@@ -98,7 +98,7 @@ College students from UO Human Subjects Pool
 - $N=13$ foster-care adolescents don't have task data
 - 313 participants provided task data (334 - 21 missing)
 
-## Participants Pubertal Development
+## Participants' Pubertal Development
 
 <img src="figures/pdsplot-1.svg" style="width:90%" />
 
@@ -202,9 +202,9 @@ Differences between conditions are relatively constant across age
 
 <div style="margin: auto;width: 80%;text-align: left; border:1px solid grey;">
 1. More developed participants perform better in general...
-2. ...likely due to less random responding ($\xi$).
-3. Motive related learning enhancement does not appear to covary with development as we would expect.
-    - Older participants do not appear to learn better in social motive conditions.
+2. ...likely due to less random responding ($\xi$)
+3. Motive related learning enhancement does not appear to covary with development as we would expect
+    - Older participants do not appear to learn better in social motive conditions
 </div>
 
 ## Aim 3: Correlations with self-report motives
@@ -241,17 +241,17 @@ Measures related to social motives (All samples)
 
 ## General conclusions
 
-1. Overall better learning and higher learning rate in social motive conditions.
-2. This social motive learning enhancement does not appear to covary with development.
-3. Social motive learning enhancement does not relate to self-report of motives.
+1. Overall better learning and higher learning rate in social motive conditions
+2. Social motive learning enhancement does not appear to covary with development
+3. Social motive learning enhancement does not relate to self-report of motives
 
-## Possible explantions
+## Possible explanations
 
 1. Mate-seeking and status motives _don't_ develop during adolescence  
 3. Self-report measures _don't_ measure motives
 2. Social motives don't affect stimulus salience and so don't affect learning
 4. Task behavior is an imprecise measure of individual differences in social motives
-    - Task learning is irrelevant to actual social goals (e.g., popularity of computer-generated face is not instrumentally valuable for satisfying a status motive).
+    - Task learning is irrelevant to actual social goals (e.g., popularity of computer-generated face is not instrumentally valuable for satisfying a status motive)
     - Binary choice outcomes are less reliable indicators of latent constructs
     - The choice of these particular descriptors may be problematic in some way
 
@@ -296,9 +296,9 @@ Melanie Berry
 
 ## General conclusions
 
->1. Overall better learning and higher learning rate in social motive conditions.
->2. This social motive learning enhancement does not appear to covary with development.
->3. Social motive learning enhancement does not relate to self-report of motives.
+>1. Overall better learning and higher learning rate in social motive conditions
+>2. This social motive learning enhancement does not appear to covary with development
+>3. Social motive learning enhancement does not relate to self-report of motives
 
 ## More slides? You shouldn't have!
 
